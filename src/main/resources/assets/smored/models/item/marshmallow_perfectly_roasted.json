@@ -1,0 +1,6 @@
+{
+  "parent": "smored:item/marshmallow_base",
+  "textures": {
+    "layer0": "smored:item/perfectly_roasted_marshmallow"
+  }
+}
