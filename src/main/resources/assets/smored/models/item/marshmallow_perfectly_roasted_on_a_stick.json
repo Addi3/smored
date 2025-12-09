@@ -1,6 +1,8 @@
 {
-  "parent": "smored:item/marshmallow_on_a_stick_base",
-  "textures": {
-    "layer0": "smored:item/perfectly_roasted_marshmallow"
-  }
+	"format_version": "1.9.0",
+	"credit": "Made with Blockbench",
+	"parent": "smored:item/marshmallow_on_a_stick_base",
+	"textures": {
+		"layer0": "smored:item/perfectly_roasted_marshmallow"
+	}
 }

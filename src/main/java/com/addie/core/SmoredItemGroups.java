@@ -3,7 +3,6 @@ package com.addie.core;
 import com.addie.Smored;
 import dev.amble.lib.container.impl.ItemGroupContainer;
 import dev.amble.lib.itemgroup.AItemGroup;
-import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemStack;
 
 public class SmoredItemGroups implements ItemGroupContainer {

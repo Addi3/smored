@@ -1,11 +1,16 @@
 {
   "item.smored.marshmallow": "MarshMallow",
   "item.smored.marshmallow_burnt": "Burnt MarshMallow",
-  "item.smored.marshmallow_burnt_on_a_stick": "Burnt MarshMallow On A Stick",
+  "item.smored.marshmallow_burnt_on_a_stick": "MarshMallow On A Stick",
   "item.smored.marshmallow_on_a_stick": "MarshMallow On A Stick",
+  "item.smored.marshmallow_on_a_stick.burnt": "Burnt Marshmallow",
+  "item.smored.marshmallow_on_a_stick.lightly_roasted": "Lightly Roasted Marshmallow",
+  "item.smored.marshmallow_on_a_stick.perfectly_roasted": "Perfectly Roasted Marshmallow",
+  "item.smored.marshmallow_on_a_stick.raw": "Uncooked Marshmallow",
+  "item.smored.marshmallow_on_a_stick.unknown": "umm... how did you get this state?",
   "item.smored.marshmallow_perfectly_roasted": "Roasted MarshMallow",
-  "item.smored.marshmallow_perfectly_roasted_on_a_stick": "Roasted MarshMallow On A Stick",
+  "item.smored.marshmallow_perfectly_roasted_on_a_stick": "MarshMallow On A Stick",
   "item.smored.marshmallow_slightly_roasted": "Slightly Roasted MarshMallow",
-  "item.smored.marshmallow_slightly_roasted_on_a_stick": "Slightly Roasted MarshMallow On A Stick",
+  "item.smored.marshmallow_slightly_roasted_on_a_stick": "MarshMallow On A Stick",
   "itemGroup.smored.item_group": "Smore'd"
 }

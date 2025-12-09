@@ -56,6 +56,11 @@ public class SmoredDataGenerator implements DataGeneratorEntrypoint {
 
             // Misc
             provider.addTranslation(SmoredItemGroups.MAIN,"Smore'd");
+            provider.addTranslation("item.smored.marshmallow_on_a_stick.raw","Uncooked Marshmallow");
+            provider.addTranslation("item.smored.marshmallow_on_a_stick.lightly_roasted","Lightly Roasted Marshmallow");
+            provider.addTranslation("item.smored.marshmallow_on_a_stick.perfectly_roasted","Perfectly Roasted Marshmallow");
+            provider.addTranslation("item.smored.marshmallow_on_a_stick.burnt","Burnt Marshmallow");
+            provider.addTranslation("item.smored.marshmallow_on_a_stick.unknown","umm... how did you get this state?");
 
             // Items
             provider.addTranslation(SmoredItems.MARSHMALLOW,"MarshMallow");
@@ -64,9 +69,9 @@ public class SmoredDataGenerator implements DataGeneratorEntrypoint {
             provider.addTranslation(SmoredItems.MARSHMALLOW_BURNT,"Burnt MarshMallow");
 
             provider.addTranslation(SmoredItems.MARSHMALLOW_ON_A_STICK,"MarshMallow On A Stick");
-            provider.addTranslation(SmoredItems.MARSHMALLOW_SLIGHTLY_ROASTED_ON_A_STICK,"Slightly Roasted MarshMallow On A Stick");
-            provider.addTranslation(SmoredItems.MARSHMALLOW_PERFECTLY_ROASTED_ON_A_STICK,"Roasted MarshMallow On A Stick");
-            provider.addTranslation(SmoredItems.MARSHMALLOW_BURNT_ON_A_STICK,"Burnt MarshMallow On A Stick");
+            provider.addTranslation(SmoredItems.MARSHMALLOW_SLIGHTLY_ROASTED_ON_A_STICK,"MarshMallow On A Stick");
+            provider.addTranslation(SmoredItems.MARSHMALLOW_PERFECTLY_ROASTED_ON_A_STICK,"MarshMallow On A Stick");
+            provider.addTranslation(SmoredItems.MARSHMALLOW_BURNT_ON_A_STICK,"MarshMallow On A Stick");
 
 
             return provider;
