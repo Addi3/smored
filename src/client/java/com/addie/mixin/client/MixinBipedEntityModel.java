@@ -21,7 +21,7 @@ public abstract class MixinBipedEntityModel<T extends LivingEntity> {
         ItemStack main = entity.getMainHandStack();
         ItemStack off = entity.getOffHandStack();
 
-        if (isRoasting(main) || isRoasting(off)) {
+        if (isRoasting(main)) {
             this.leftArm.pitch = 0f;
             this.leftArm.yaw = 0f;
             this.leftArm.roll = 0f;

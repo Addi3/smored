@@ -5,10 +5,8 @@ import net.minecraft.block.BlockState;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.TagKey;
@@ -34,24 +32,42 @@ public class MarshmallowOnAStickItem extends Item {
             TagKey.of(RegistryKeys.BLOCK, new Identifier("smored", "roasting_spot"));
 
     public MarshmallowOnAStickItem(Settings settings) {
-        super(settings.food(new FoodComponent.Builder()
-                .hunger(4)
-                .saturationModifier(0.3f)
-                .build()));
+        super(settings);
     }
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack stack = user.getStackInHand(hand);
-        boolean nearRoasting = isNearRoastingSpot(world, user);
 
-        NbtCompound nbt = stack.getOrCreateNbt();
-        if (nearRoasting) {
-            nbt.putBoolean("Roasting", true);
-        } else {
-            nbt.putBoolean("Roasting", false);
+        // SHIFT + right-click = take marshmallow off stick
+        if (user.isSneaking()) {
+            NbtCompound nbt = stack.getOrCreateNbt();
+            int stage = nbt.getInt("CookLevel");
+
+            // Determine marshmallow item based on roast stage
+            ItemStack marshmallowItem = switch (stage) {
+                case 0 -> new ItemStack(SmoredItems.MARSHMALLOW);
+                case 1 -> new ItemStack(SmoredItems.MARSHMALLOW_SLIGHTLY_ROASTED);
+                case 2 -> new ItemStack(SmoredItems.MARSHMALLOW_PERFECTLY_ROASTED);
+                case 3 -> new ItemStack(SmoredItems.MARSHMALLOW_BURNT);
+                default -> new ItemStack(SmoredItems.MARSHMALLOW);
+            };
+
+            if (!world.isClient) {
+                user.getInventory().insertStack(marshmallowItem);  // Give marshmallow
+                user.getInventory().insertStack(new ItemStack(net.minecraft.item.Items.STICK)); // Give stick
+                stack.decrement(1); // Remove marshmallow-on-stick
+            }
+
+            return TypedActionResult.success(stack);
         }
 
+        // Normal right-click = start roasting if near a roasting spot
+        if (!isNearRoastingSpot(world, user)) {
+            return TypedActionResult.pass(stack);
+        }
+
+        stack.getOrCreateNbt().putBoolean("Roasting", true);
         user.setCurrentHand(hand);
         return TypedActionResult.consume(stack);
     }
@@ -63,6 +79,7 @@ public class MarshmallowOnAStickItem extends Item {
         NbtCompound nbt = stack.getOrCreateNbt();
         if (!nbt.getBoolean("Roasting")) return;
 
+        // Stop roasting if no longer near a valid roasting spot
         if (!isNearRoastingSpot(world, player)) {
             nbt.putBoolean("Roasting", false);
             player.clearActiveItem();
@@ -99,7 +116,7 @@ public class MarshmallowOnAStickItem extends Item {
 
     @Override
     public UseAction getUseAction(ItemStack stack) {
-        return stack.getOrCreateNbt().getBoolean("Roasting") ? UseAction.CROSSBOW : UseAction.EAT;
+        return stack.getOrCreateNbt().getBoolean("Roasting") ? UseAction.CROSSBOW : UseAction.NONE;
     }
 
     @Override
@@ -109,21 +126,9 @@ public class MarshmallowOnAStickItem extends Item {
 
     @Override
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
-        if (!(user instanceof PlayerEntity player)) return stack;
-
-        NbtCompound nbt = stack.getOrCreateNbt();
-        if (nbt.getBoolean("Roasting")) {
+        if (user instanceof PlayerEntity player) {
             player.clearActiveItem();
-            return stack;
         }
-
-        ItemStack consumed = stack.split(1);
-        player.eatFood(world, consumed);
-
-        if (!world.isClient) {
-            player.getInventory().insertStack(new ItemStack(Items.STICK));
-        }
-
         return stack;
     }
 
@@ -154,7 +159,7 @@ public class MarshmallowOnAStickItem extends Item {
         NbtCompound nbt = stack.getOrCreateNbt();
         int stage = nbt.getInt("CookLevel");
 
-        String key = switch (stage) {
+        String stageKey = switch (stage) {
             case 0 -> "item.smored.marshmallow_on_a_stick.raw";
             case 1 -> "item.smored.marshmallow_on_a_stick.lightly_roasted";
             case 2 -> "item.smored.marshmallow_on_a_stick.perfectly_roasted";
@@ -163,13 +168,17 @@ public class MarshmallowOnAStickItem extends Item {
         };
 
         int color = switch (stage) {
-            case 0 -> 0xFFFFFF;
+            case 0 -> 0xc9a89d;
             case 1 -> 0xFFD27F;
             case 2 -> 0xFFAA00;
             case 3 -> 0x550000;
-            default -> 0xFFFFFF;
+            default -> 0x7b1019;
         };
 
-        tooltip.add(Text.translatable(key).styled(s -> s.withColor(TextColor.fromRgb(color))));
+        tooltip.add(Text.translatable(stageKey).styled(s -> s.withColor(TextColor.fromRgb(color))));
+
+        tooltip.add(Text.translatable("item.smored.marshmallow_on_a_stick.tooltip"));
+        tooltip.add(Text.translatable("item.smored.marshmallow_on_a_stick.tooltipalt"));
     }
+
 }

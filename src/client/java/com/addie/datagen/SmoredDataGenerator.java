@@ -61,11 +61,13 @@ public class SmoredDataGenerator implements DataGeneratorEntrypoint {
             provider.addTranslation("item.smored.marshmallow_on_a_stick.perfectly_roasted","Perfectly Roasted Marshmallow");
             provider.addTranslation("item.smored.marshmallow_on_a_stick.burnt","Burnt Marshmallow");
             provider.addTranslation("item.smored.marshmallow_on_a_stick.unknown","umm... how did you get this state?");
+            provider.addTranslation("item.smored.marshmallow_on_a_stick.tooltip","Shift + Right-Click to take marshmallow off stick!");
+            provider.addTranslation("item.smored.marshmallow_on_a_stick.tooltipalt","Right-Click over campfire to cook!");
 
             // Items
             provider.addTranslation(SmoredItems.MARSHMALLOW,"MarshMallow");
             provider.addTranslation(SmoredItems.MARSHMALLOW_SLIGHTLY_ROASTED,"Slightly Roasted MarshMallow");
-            provider.addTranslation(SmoredItems.MARSHMALLOW_PERFECTLY_ROASTED,"Roasted MarshMallow");
+            provider.addTranslation(SmoredItems.MARSHMALLOW_PERFECTLY_ROASTED,"Perfectly Roasted MarshMallow");
             provider.addTranslation(SmoredItems.MARSHMALLOW_BURNT,"Burnt MarshMallow");
 
             provider.addTranslation(SmoredItems.MARSHMALLOW_ON_A_STICK,"MarshMallow On A Stick");
