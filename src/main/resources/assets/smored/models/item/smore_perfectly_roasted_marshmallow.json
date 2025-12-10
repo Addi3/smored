@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "smored:item/smore_perfectly_roasted_marshmallow"
+  }
+}

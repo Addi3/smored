@@ -35,17 +35,14 @@ public abstract class HeldItemRendererMixin {
             int light,
             CallbackInfo ci
     ) {
-        // Only override transforms for roasting marshmallows
         if (!(stack.getItem() instanceof MarshmallowOnAStickItem)) return;
         if (!stack.hasNbt() || !stack.getNbt().getBoolean("Roasting")) return;
         if (!player.isUsingItem() || player.getActiveHand() != hand) return;
 
-        // Cancel vanilla transform for roasting
         ci.cancel();
         matrices.push();
 
-        // Custom roasting transform
-        matrices.translate(0f, -0.35f, -0.45f);
+        matrices.translate(0f, -0.35f, -0.8f);
 
         Arm arm = (hand == Hand.MAIN_HAND) ? player.getMainArm() : player.getMainArm().getOpposite();
         ModelTransformationMode mode = (arm == Arm.RIGHT)

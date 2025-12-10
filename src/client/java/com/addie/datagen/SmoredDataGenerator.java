@@ -70,6 +70,11 @@ public class SmoredDataGenerator implements DataGeneratorEntrypoint {
             provider.addTranslation(SmoredItems.MARSHMALLOW_SLIGHTLY_ROASTED,"Slightly Roasted MarshMallow");
             provider.addTranslation(SmoredItems.MARSHMALLOW_PERFECTLY_ROASTED,"Perfectly Roasted MarshMallow");
             provider.addTranslation(SmoredItems.MARSHMALLOW_BURNT,"Burnt MarshMallow");
+            provider.addTranslation(SmoredItems.CRACKER,"Cracker");
+            provider.addTranslation(SmoredItems.SMORE,"Smore");
+            provider.addTranslation(SmoredItems.SMORE_BURNT_MARSHMALLOW,"Smore");
+            provider.addTranslation(SmoredItems.SMORE_PERFECTLY_ROASTED_MARSHMALLOW,"Smore");
+            provider.addTranslation(SmoredItems.SMORE_SLIGHTLY_ROASTED_MARSHMALLOW,"Smore");
 
             provider.addTranslation(SmoredItems.MARSHMALLOW_ON_A_STICK,"MarshMallow On A Stick");
             provider.addTranslation(SmoredItems.MARSHMALLOW_SLIGHTLY_ROASTED_ON_A_STICK,"MarshMallow On A Stick");
