@@ -1,6 +1,46 @@
 package com.addie.core;
 
+import com.addie.core.block.*;
+import dev.amble.lib.block.ABlockSettings;
 import dev.amble.lib.container.impl.BlockContainer;
+import dev.amble.lib.datagen.util.NoBlockDrop;
+import dev.amble.lib.datagen.util.NoEnglish;
+import dev.amble.lib.item.AItemSettings;
+import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.piston.PistonBehavior;
+import net.minecraft.sound.BlockSoundGroup;
 
 public class SmoredBlocks extends BlockContainer {
+
+
+    @NoEnglish
+    @NoBlockDrop
+    public static final Block MARSHMALLOW_JAR = new MarshmallowJarBlock(ABlockSettings.create()
+            .itemSettings(new AItemSettings().group(SmoredItemGroups.MAIN)).requiresTool()
+            .strength(0.5F, 1.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.GLASS));
+
+    @NoEnglish
+    @NoBlockDrop
+    public static final Block MARSHMALLOW_JAR_RAW = new MarshmallowJarRawBlock(ABlockSettings.create()
+            .itemSettings(new AItemSettings()).requiresTool()
+            .strength(0.5F, 1.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.GLASS));
+
+    @NoEnglish
+    @NoBlockDrop
+    public static final Block MARSHMALLOW_JAR_SLIGHTLY_ROASTED = new MarshmallowJarSlightlyRoastedBlock(ABlockSettings.create()
+            .itemSettings(new AItemSettings()).requiresTool()
+            .strength(0.5F, 1.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.GLASS));
+
+    @NoEnglish
+    @NoBlockDrop
+    public static final Block MARSHMALLOW_JAR_PERFECTLY_ROASTED = new MarshmallowJarPerfectlyRoastedBlock(ABlockSettings.create()
+            .itemSettings(new AItemSettings()).requiresTool()
+            .strength(0.5F, 1.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.GLASS));
+
+    @NoEnglish
+    @NoBlockDrop
+    public static final Block MARSHMALLOW_JAR_BURNT = new MarshmallowJarBurntBlock(ABlockSettings.create()
+            .itemSettings(new AItemSettings()).requiresTool()
+            .strength(0.5F, 1.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.GLASS));
 }

@@ -1,0 +1,6 @@
+{
+  "parent": "smored:block/jar",
+  "textures": {
+    "layer0": "smored:block/jar_marshmallow_slightly_roasted"
+  }
+}

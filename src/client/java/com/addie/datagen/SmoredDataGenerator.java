@@ -1,5 +1,6 @@
 package com.addie.datagen;
 
+import com.addie.core.SmoredBlocks;
 import com.addie.core.SmoredItemGroups;
 import com.addie.core.SmoredItems;
 import com.addie.datagen.providers.SmoredAchievementProvider;
@@ -74,6 +75,13 @@ public class SmoredDataGenerator implements DataGeneratorEntrypoint {
             provider.addTranslation(SmoredItems.MARSHMALLOW_SLIGHTLY_ROASTED_ON_A_STICK,"MarshMallow On A Stick");
             provider.addTranslation(SmoredItems.MARSHMALLOW_PERFECTLY_ROASTED_ON_A_STICK,"MarshMallow On A Stick");
             provider.addTranslation(SmoredItems.MARSHMALLOW_BURNT_ON_A_STICK,"MarshMallow On A Stick");
+
+            // Blocks
+            provider.addTranslation(SmoredBlocks.MARSHMALLOW_JAR,"Jar");
+            provider.addTranslation(SmoredBlocks.MARSHMALLOW_JAR_RAW,"Jar");
+            provider.addTranslation(SmoredBlocks.MARSHMALLOW_JAR_BURNT,"Jar");
+            provider.addTranslation(SmoredBlocks.MARSHMALLOW_JAR_PERFECTLY_ROASTED,"Jar");
+            provider.addTranslation(SmoredBlocks.MARSHMALLOW_JAR_SLIGHTLY_ROASTED,"Jar");
 
 
             return provider;
