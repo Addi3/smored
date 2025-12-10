@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "smore",
+  "key": {
+    "C": {
+      "item": "smored:cracker"
+    },
+    "K": {
+      "item": "minecraft:cocoa_beans"
+    },
+    "M": {
+      "item": "smored:marshmallow_burnt"
+    }
+  },
+  "pattern": [
+    "CMK",
+    "  C"
+  ],
+  "result": {
+    "count": 4,
+    "item": "smored:smore_burnt_marshmallow"
+  },
+  "show_notification": true
+}

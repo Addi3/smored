@@ -1,0 +1,30 @@
+{
+  "frames": [
+    {
+      "texture": "smored:textures/overlay/marshmallow.png",
+      "items": [
+        "smored:cracker",
+        "smored:marshmallow",
+        "smored:marshmallow_lightly_roasted",
+        "smored:marshmallow_perfectly_roasted",
+        "smored:marshmallow_burnt",
+        "smored:marshmallow_on_a_stick",
+        "smored:marshmallow_lightly_roasted_on_a_stick",
+        "smored:marshmallow_perfectly_roasted_on_a_stick",
+        "smored:marshmallow_burnt_on_a_stick",
+        "smored:smore",
+        "smored:smore_lightly_roasted_marshmallow",
+        "smored:smore_perfectly_roasted_marshmallow",
+        "smored:smore_burnt_marshmallow",
+        "smored:marshmallow_jar",
+        "smored:marshmallow_jar_raw",
+        "smored:marshmallow_jar_lightly_roasted",
+        "smored:marshmallow_jar_perfectly_roasted",
+        "smored:marshmallow_jar_burnt"
+      ],
+      "gradientType": "custom",
+      "borderType": "static",
+      "gradientColors": ["#451d21", "#451d21", "#451d21"]
+    }
+  ]
+}

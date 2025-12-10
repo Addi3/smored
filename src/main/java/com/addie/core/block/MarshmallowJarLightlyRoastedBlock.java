@@ -21,11 +21,11 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.nbt.NbtCompound;
 
-public class MarshmallowJarSlightlyRoastedBlock extends Block {
+public class MarshmallowJarLightlyRoastedBlock extends Block {
 
     public static final IntProperty ITEM_COUNT = IntProperty.of("item_count", 1, 16);
 
-    public MarshmallowJarSlightlyRoastedBlock(Settings settings) {
+    public MarshmallowJarLightlyRoastedBlock(Settings settings) {
         super(settings);
         this.setDefaultState(this.stateManager.getDefaultState().with(ITEM_COUNT, 1));
     }
@@ -71,7 +71,7 @@ public class MarshmallowJarSlightlyRoastedBlock extends Block {
         }
 
 
-        if (item == SmoredItems.MARSHMALLOW_SLIGHTLY_ROASTED && currentCount < 16) {
+        if (item == SmoredItems.MARSHMALLOW_LIGHTLY_ROASTED && currentCount < 16) {
             return handleAddMarshmallowInteraction(world, pos, state, player, currentCount, itemStack);
         }
 
@@ -109,7 +109,7 @@ public class MarshmallowJarSlightlyRoastedBlock extends Block {
 
     private ItemStack getMarshmallowOnStick(int currentCount) {
 
-        ItemStack marshmallowOnStick = new ItemStack(SmoredItems.MARSHMALLOW_SLIGHTLY_ROASTED_ON_A_STICK);
+        ItemStack marshmallowOnStick = new ItemStack(SmoredItems.MARSHMALLOW_LIGHTLY_ROASTED_ON_A_STICK);
         NbtCompound nbt = marshmallowOnStick.getOrCreateNbt();
         nbt.putInt("CookLevel", 1);
         return marshmallowOnStick;
@@ -117,8 +117,8 @@ public class MarshmallowJarSlightlyRoastedBlock extends Block {
 
     private ActionResult handleEmptyHandInteraction(World world, BlockPos pos, BlockState state,
                                                     PlayerEntity player, int currentCount) {
-        if (!player.getInventory().insertStack(new ItemStack(SmoredItems.MARSHMALLOW_SLIGHTLY_ROASTED))) {
-            player.giveItemStack(new ItemStack(SmoredItems.MARSHMALLOW_SLIGHTLY_ROASTED));
+        if (!player.getInventory().insertStack(new ItemStack(SmoredItems.MARSHMALLOW_LIGHTLY_ROASTED))) {
+            player.giveItemStack(new ItemStack(SmoredItems.MARSHMALLOW_LIGHTLY_ROASTED));
         }
 
         int newCount = Math.max(currentCount - 1, 1);
@@ -165,7 +165,7 @@ public class MarshmallowJarSlightlyRoastedBlock extends Block {
 
 
             for (int i = 0; i < itemCount; i++) {
-                this.dropStack(world, pos, new ItemStack(SmoredItems.MARSHMALLOW_SLIGHTLY_ROASTED));
+                this.dropStack(world, pos, new ItemStack(SmoredItems.MARSHMALLOW_LIGHTLY_ROASTED));
             }
         }
 

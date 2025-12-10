@@ -30,7 +30,7 @@ public class SmoredBlocks extends BlockContainer {
 
     @NoEnglish
     @NoBlockDrop
-    public static final Block MARSHMALLOW_JAR_SLIGHTLY_ROASTED = new MarshmallowJarSlightlyRoastedBlock(ABlockSettings.create()
+    public static final Block MARSHMALLOW_JAR_LIGHTLY_ROASTED = new MarshmallowJarLightlyRoastedBlock(ABlockSettings.create()
             .itemSettings(new AItemSettings()).requiresTool()
             .strength(0.5F, 1.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.GLASS));
 

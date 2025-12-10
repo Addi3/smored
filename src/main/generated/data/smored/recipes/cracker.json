@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "smore",
+  "key": {
+    "E": {
+      "item": "minecraft:egg"
+    },
+    "W": {
+      "item": "minecraft:wheat"
+    }
+  },
+  "pattern": [
+    "WE"
+  ],
+  "result": {
+    "count": 2,
+    "item": "smored:cracker"
+  },
+  "show_notification": true
+}

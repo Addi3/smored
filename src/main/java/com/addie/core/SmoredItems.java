@@ -12,7 +12,7 @@ public class SmoredItems extends ItemContainer {
     public static final Item MARSHMALLOW = new Item(new AItemSettings().group(SmoredItemGroups.MAIN).food(SmoredFoodComponenets.MARSHMALLOW).maxCount(16));
 
     @NoEnglish
-    public static final Item MARSHMALLOW_SLIGHTLY_ROASTED = new Item(new AItemSettings().group(SmoredItemGroups.MAIN).food(SmoredFoodComponenets.MARSHMALLOW_COOKED).maxCount(16));
+    public static final Item MARSHMALLOW_LIGHTLY_ROASTED = new Item(new AItemSettings().group(SmoredItemGroups.MAIN).food(SmoredFoodComponenets.MARSHMALLOW_COOKED).maxCount(16));
 
     @NoEnglish
     public static final Item MARSHMALLOW_PERFECTLY_ROASTED = new Item(new AItemSettings().group(SmoredItemGroups.MAIN).food(SmoredFoodComponenets.MARSHMALLOW_COOKED).maxCount(16));
@@ -24,7 +24,7 @@ public class SmoredItems extends ItemContainer {
     public static final Item MARSHMALLOW_ON_A_STICK = new MarshmallowOnAStickItem(new AItemSettings().group(SmoredItemGroups.MAIN).maxCount(1));
 
     @NoEnglish
-    public static final Item MARSHMALLOW_SLIGHTLY_ROASTED_ON_A_STICK = new MarshmallowOnAStickItem(new AItemSettings().maxCount(1));
+    public static final Item MARSHMALLOW_LIGHTLY_ROASTED_ON_A_STICK = new MarshmallowOnAStickItem(new AItemSettings().maxCount(1));
 
     @NoEnglish
     public static final Item MARSHMALLOW_PERFECTLY_ROASTED_ON_A_STICK = new MarshmallowOnAStickItem(new AItemSettings().maxCount(1));
@@ -39,7 +39,7 @@ public class SmoredItems extends ItemContainer {
     public static final Item SMORE = new SmoreItem(new AItemSettings().group(SmoredItemGroups.MAIN).food(SmoredFoodComponenets.MARSHMALLOW));
 
     @NoEnglish
-    public static final Item SMORE_SLIGHTLY_ROASTED_MARSHMALLOW = new SmoreSlightlyRoastedItem(new AItemSettings().group(SmoredItemGroups.MAIN).food(SmoredFoodComponenets.MARSHMALLOW_COOKED));
+    public static final Item SMORE_LIGHTLY_ROASTED_MARSHMALLOW = new SmoreLightlyRoastedItem(new AItemSettings().group(SmoredItemGroups.MAIN).food(SmoredFoodComponenets.MARSHMALLOW_COOKED));
 
     @NoEnglish
     public static final Item SMORE_PERFECTLY_ROASTED_MARSHMALLOW = new SmorePerfectlyRoastedItem(new AItemSettings().group(SmoredItemGroups.MAIN).food(SmoredFoodComponenets.MARSHMALLOW_COOKED));

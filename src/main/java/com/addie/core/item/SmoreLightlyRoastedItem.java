@@ -6,14 +6,13 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.text.Style;
 import net.minecraft.text.Text;
 import net.minecraft.text.TextColor;
-import net.minecraft.util.Formatting;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class SmoreSlightlyRoastedItem extends Item {
-    public SmoreSlightlyRoastedItem(Settings settings) {
+public class SmoreLightlyRoastedItem extends Item {
+    public SmoreLightlyRoastedItem(Settings settings) {
         super(settings);
     }
 

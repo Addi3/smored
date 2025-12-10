@@ -72,7 +72,7 @@ public class MarshmallowJarBlock extends Block {
 
     private boolean isMarshmallowItem(Item item) {
         return item == SmoredItems.MARSHMALLOW ||
-                item == SmoredItems.MARSHMALLOW_SLIGHTLY_ROASTED ||
+                item == SmoredItems.MARSHMALLOW_LIGHTLY_ROASTED ||
                 item == SmoredItems.MARSHMALLOW_PERFECTLY_ROASTED ||
                 item == SmoredItems.MARSHMALLOW_BURNT;
     }
@@ -80,8 +80,8 @@ public class MarshmallowJarBlock extends Block {
     private Block getBlockForMarshmallow(Item item) {
         if (item == SmoredItems.MARSHMALLOW) {
             return SmoredBlocks.MARSHMALLOW_JAR_RAW;
-        } else if (item == SmoredItems.MARSHMALLOW_SLIGHTLY_ROASTED) {
-            return SmoredBlocks.MARSHMALLOW_JAR_SLIGHTLY_ROASTED;
+        } else if (item == SmoredItems.MARSHMALLOW_LIGHTLY_ROASTED) {
+            return SmoredBlocks.MARSHMALLOW_JAR_LIGHTLY_ROASTED;
         } else if (item == SmoredItems.MARSHMALLOW_PERFECTLY_ROASTED) {
             return SmoredBlocks.MARSHMALLOW_JAR_PERFECTLY_ROASTED;
         } else if (item == SmoredItems.MARSHMALLOW_BURNT) {

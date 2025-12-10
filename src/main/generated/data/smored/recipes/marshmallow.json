@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "marshmallow",
+  "key": {
+    "S": {
+      "item": "minecraft:sugar"
+    },
+    "W": {
+      "item": "minecraft:wheat"
+    }
+  },
+  "pattern": [
+    "WSW"
+  ],
+  "result": {
+    "count": 4,
+    "item": "smored:marshmallow"
+  },
+  "show_notification": true
+}

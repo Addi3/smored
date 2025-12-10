@@ -1,0 +1,20 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "key": {
+    "M": {
+      "item": "smored:marshmallow"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "M",
+    "S"
+  ],
+  "result": {
+    "count": 1,
+    "item": "smored:marshmallow_on_a_stick"
+  }
+}

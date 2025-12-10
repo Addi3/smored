@@ -3,6 +3,6 @@
 	"credit": "Made with Blockbench",
 	"parent": "smored:item/marshmallow_on_a_stick_base",
 	"textures": {
-		"layer0": "smored:item/slightly_roasted_marshmallow"
+		"layer0": "smored:item/lightly_roasted_marshmallow"
 	}
 }

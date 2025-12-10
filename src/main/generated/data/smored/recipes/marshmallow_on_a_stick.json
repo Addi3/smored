@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "marshmallow",
+  "key": {
+    "M": {
+      "item": "smored:marshmallow"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "M",
+    "S"
+  ],
+  "result": {
+    "item": "smored:marshmallow_on_a_stick"
+  },
+  "show_notification": true
+}

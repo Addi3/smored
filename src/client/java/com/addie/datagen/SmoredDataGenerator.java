@@ -39,8 +39,133 @@ public class SmoredDataGenerator implements DataGeneratorEntrypoint {
         pack.addProvider((((output, registriesFuture) -> {
             SmoredRecipeProvider provider = new SmoredRecipeProvider(output);
 
+            // MISC
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, SmoredBlocks.COPPER_CAMPFIRE, 1)
+                    .group("marshmallow")
+                    .pattern(" S ")
+                    .pattern("SCS")
+                    .pattern("LLL")
+                    .input('S',Items.STICK)
+                    .input('C',Items.COPPER_INGOT)
+                    .input('L',ItemTags.LOGS)
+                    .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                    .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT)));
 
 
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, SmoredBlocks.MARSHMALLOW_JAR, 2)
+                    .group("marshmallow")
+                    .pattern(" W ")
+                    .pattern("G G")
+                    .pattern("GGG")
+                    .input('G',Blocks.GLASS)
+                    .input('W',ItemTags.WOOL_CARPETS)
+                    .criterion(hasItem(Blocks.GLASS), conditionsFromItem(Blocks.GLASS)));
+
+            // MARSHMALLOWS
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, SmoredItems.MARSHMALLOW, 4)
+                    .group("marshmallow")
+                    .pattern("WSW")
+                    .input('S',Items.SUGAR)
+                    .input('W',Items.WHEAT)
+                    .criterion(hasItem(Items.SUGAR), conditionsFromItem(Items.SUGAR))
+                    .criterion(hasItem(Items.WHEAT), conditionsFromItem(Items.WHEAT)));
+
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, SmoredItems.MARSHMALLOW_ON_A_STICK, 1)
+                    .group("marshmallow")
+                    .pattern("M")
+                    .pattern("S")
+                    .input('S',Items.STICK)
+                    .input('M',SmoredItems.MARSHMALLOW)
+                    .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                    .criterion(hasItem(SmoredItems.MARSHMALLOW), conditionsFromItem(SmoredItems.MARSHMALLOW)));
+
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, SmoredItems.MARSHMALLOW_LIGHTLY_ROASTED, 1)
+                    .group("marshmallow")
+                    .pattern("M")
+                    .pattern("S")
+                    .input('S',Items.STICK)
+                    .input('M',SmoredItems.MARSHMALLOW_LIGHTLY_ROASTED)
+                    .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                    .criterion(hasItem(SmoredItems.MARSHMALLOW_LIGHTLY_ROASTED), conditionsFromItem(SmoredItems.MARSHMALLOW_LIGHTLY_ROASTED)));
+
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, SmoredItems.MARSHMALLOW_PERFECTLY_ROASTED_ON_A_STICK, 1)
+                    .group("marshmallow")
+                    .pattern("M")
+                    .pattern("S")
+                    .input('S',Items.STICK)
+                    .input('M',SmoredItems.MARSHMALLOW_PERFECTLY_ROASTED)
+                    .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                    .criterion(hasItem(SmoredItems.MARSHMALLOW_PERFECTLY_ROASTED), conditionsFromItem(SmoredItems.MARSHMALLOW_PERFECTLY_ROASTED)));
+
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, SmoredItems.MARSHMALLOW_BURNT_ON_A_STICK, 1)
+                    .group("marshmallow")
+                    .pattern("M")
+                    .pattern("S")
+                    .input('S',Items.STICK)
+                    .input('M',SmoredItems.MARSHMALLOW_BURNT)
+                    .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                    .criterion(hasItem(SmoredItems.MARSHMALLOW_BURNT), conditionsFromItem(SmoredItems.MARSHMALLOW_BURNT)));
+
+            // SMORES
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, SmoredItems.CRACKER, 2)
+                    .group("smore")
+                    .pattern("WE")
+                    .input('E',Items.EGG)
+                    .input('W',Items.WHEAT)
+                    .criterion(hasItem(Items.EGG), conditionsFromItem(Items.EGG))
+                    .criterion(hasItem(Items.WHEAT), conditionsFromItem(Items.WHEAT)));
+
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, SmoredItems.SMORE, 4)
+                    .group("smore")
+                    .pattern("CMK")
+                    .pattern("  C")
+                    .input('C',SmoredItems.CRACKER)
+                    .input('M',SmoredItems.MARSHMALLOW)
+                    .input('K',Items.COCOA_BEANS)
+                    .criterion(hasItem(SmoredItems.CRACKER), conditionsFromItem(SmoredItems.CRACKER))
+                    .criterion(hasItem(SmoredItems.MARSHMALLOW), conditionsFromItem(SmoredItems.MARSHMALLOW))
+                    .criterion(hasItem(Items.COCOA_BEANS), conditionsFromItem(Items.COCOA_BEANS)));
+
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, SmoredItems.SMORE_LIGHTLY_ROASTED_MARSHMALLOW, 4)
+                    .group("smore")
+                    .pattern("CMK")
+                    .pattern("  C")
+                    .input('C',SmoredItems.CRACKER)
+                    .input('M',SmoredItems.MARSHMALLOW_LIGHTLY_ROASTED)
+                    .input('K',Items.COCOA_BEANS)
+                    .criterion(hasItem(SmoredItems.CRACKER), conditionsFromItem(SmoredItems.CRACKER))
+                    .criterion(hasItem(SmoredItems.MARSHMALLOW_LIGHTLY_ROASTED), conditionsFromItem(SmoredItems.MARSHMALLOW_LIGHTLY_ROASTED))
+                    .criterion(hasItem(Items.COCOA_BEANS), conditionsFromItem(Items.COCOA_BEANS)));
+
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, SmoredItems.SMORE_PERFECTLY_ROASTED_MARSHMALLOW, 4)
+                    .group("smore")
+                    .pattern("CMK")
+                    .pattern("  C")
+                    .input('C',SmoredItems.CRACKER)
+                    .input('M',SmoredItems.MARSHMALLOW_PERFECTLY_ROASTED)
+                    .input('K',Items.COCOA_BEANS)
+                    .criterion(hasItem(SmoredItems.CRACKER), conditionsFromItem(SmoredItems.CRACKER))
+                    .criterion(hasItem(SmoredItems.MARSHMALLOW_PERFECTLY_ROASTED), conditionsFromItem(SmoredItems.MARSHMALLOW_PERFECTLY_ROASTED))
+                    .criterion(hasItem(Items.COCOA_BEANS), conditionsFromItem(Items.COCOA_BEANS)));
+
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, SmoredItems.SMORE_BURNT_MARSHMALLOW, 4)
+                    .group("smore")
+                    .pattern("CMK")
+                    .pattern("  C")
+                    .input('C',SmoredItems.CRACKER)
+                    .input('M',SmoredItems.MARSHMALLOW_BURNT)
+                    .input('K',Items.COCOA_BEANS)
+                    .criterion(hasItem(SmoredItems.CRACKER), conditionsFromItem(SmoredItems.CRACKER))
+                    .criterion(hasItem(SmoredItems.MARSHMALLOW_BURNT), conditionsFromItem(SmoredItems.MARSHMALLOW_BURNT))
+                    .criterion(hasItem(Items.COCOA_BEANS), conditionsFromItem(Items.COCOA_BEANS)));
 
             return provider;
 
@@ -67,17 +192,17 @@ public class SmoredDataGenerator implements DataGeneratorEntrypoint {
 
             // Items
             provider.addTranslation(SmoredItems.MARSHMALLOW,"MarshMallow");
-            provider.addTranslation(SmoredItems.MARSHMALLOW_SLIGHTLY_ROASTED,"Slightly Roasted MarshMallow");
+            provider.addTranslation(SmoredItems.MARSHMALLOW_LIGHTLY_ROASTED,"Lightly Roasted MarshMallow");
             provider.addTranslation(SmoredItems.MARSHMALLOW_PERFECTLY_ROASTED,"Perfectly Roasted MarshMallow");
             provider.addTranslation(SmoredItems.MARSHMALLOW_BURNT,"Burnt MarshMallow");
             provider.addTranslation(SmoredItems.CRACKER,"Cracker");
             provider.addTranslation(SmoredItems.SMORE,"Smore");
             provider.addTranslation(SmoredItems.SMORE_BURNT_MARSHMALLOW,"Smore");
             provider.addTranslation(SmoredItems.SMORE_PERFECTLY_ROASTED_MARSHMALLOW,"Smore");
-            provider.addTranslation(SmoredItems.SMORE_SLIGHTLY_ROASTED_MARSHMALLOW,"Smore");
+            provider.addTranslation(SmoredItems.SMORE_LIGHTLY_ROASTED_MARSHMALLOW,"Smore");
 
             provider.addTranslation(SmoredItems.MARSHMALLOW_ON_A_STICK,"MarshMallow On A Stick");
-            provider.addTranslation(SmoredItems.MARSHMALLOW_SLIGHTLY_ROASTED_ON_A_STICK,"MarshMallow On A Stick");
+            provider.addTranslation(SmoredItems.MARSHMALLOW_LIGHTLY_ROASTED_ON_A_STICK,"MarshMallow On A Stick");
             provider.addTranslation(SmoredItems.MARSHMALLOW_PERFECTLY_ROASTED_ON_A_STICK,"MarshMallow On A Stick");
             provider.addTranslation(SmoredItems.MARSHMALLOW_BURNT_ON_A_STICK,"MarshMallow On A Stick");
 
@@ -86,7 +211,7 @@ public class SmoredDataGenerator implements DataGeneratorEntrypoint {
             provider.addTranslation(SmoredBlocks.MARSHMALLOW_JAR_RAW,"Jar");
             provider.addTranslation(SmoredBlocks.MARSHMALLOW_JAR_BURNT,"Jar");
             provider.addTranslation(SmoredBlocks.MARSHMALLOW_JAR_PERFECTLY_ROASTED,"Jar");
-            provider.addTranslation(SmoredBlocks.MARSHMALLOW_JAR_SLIGHTLY_ROASTED,"Jar");
+            provider.addTranslation(SmoredBlocks.MARSHMALLOW_JAR_LIGHTLY_ROASTED,"Jar");
             provider.addTranslation(SmoredBlocks.COPPER_CAMPFIRE,"Copper Campfire");
 
 

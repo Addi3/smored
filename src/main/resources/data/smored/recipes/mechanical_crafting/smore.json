@@ -1,0 +1,23 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "key": {
+    "M": {
+      "item": "smored:marshmallow"
+    },
+    "C": {
+      "item": "smored:cracker"
+    },
+    "K": {
+      "item": "minecraft:coco_bean"
+    }
+  },
+  "pattern": [
+    "CMK",
+    "  C"
+  ],
+  "result": {
+    "count": 1,
+    "item": "smored:smore"
+  }
+}

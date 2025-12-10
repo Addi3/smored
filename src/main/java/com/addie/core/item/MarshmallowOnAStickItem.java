@@ -48,7 +48,7 @@ public class MarshmallowOnAStickItem extends Item {
 
             ItemStack marshmallowItem = switch (stage) {
                 case 0 -> new ItemStack(SmoredItems.MARSHMALLOW);
-                case 1 -> new ItemStack(SmoredItems.MARSHMALLOW_SLIGHTLY_ROASTED);
+                case 1 -> new ItemStack(SmoredItems.MARSHMALLOW_LIGHTLY_ROASTED);
                 case 2 -> new ItemStack(SmoredItems.MARSHMALLOW_PERFECTLY_ROASTED);
                 case 3 -> new ItemStack(SmoredItems.MARSHMALLOW_BURNT);
                 default -> new ItemStack(SmoredItems.MARSHMALLOW);
@@ -103,7 +103,7 @@ public class MarshmallowOnAStickItem extends Item {
             progress = 0;
 
             Item nextStageItem = switch (cookStage) {
-                case 1 -> SmoredItems.MARSHMALLOW_SLIGHTLY_ROASTED_ON_A_STICK;
+                case 1 -> SmoredItems.MARSHMALLOW_LIGHTLY_ROASTED_ON_A_STICK;
                 case 2 -> SmoredItems.MARSHMALLOW_PERFECTLY_ROASTED_ON_A_STICK;
                 case 3 -> SmoredItems.MARSHMALLOW_BURNT_ON_A_STICK;
                 default -> this;
