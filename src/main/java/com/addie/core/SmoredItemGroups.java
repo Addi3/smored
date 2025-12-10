@@ -9,5 +9,8 @@ public class SmoredItemGroups implements ItemGroupContainer {
 
     public static final AItemGroup MAIN = AItemGroup.builder(Smored.id("item_group"))
             .icon(() -> new ItemStack(SmoredItems.MARSHMALLOW))
+            .entries((displayContext, entries) -> {
+                entries.add(SmoredBlocks.COPPER_CAMPFIRE);
+            })
             .build();
 }

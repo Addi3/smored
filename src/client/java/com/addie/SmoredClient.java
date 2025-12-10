@@ -14,5 +14,6 @@ public class SmoredClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(SmoredBlocks.MARSHMALLOW_JAR_PERFECTLY_ROASTED, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(SmoredBlocks.MARSHMALLOW_JAR_RAW, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(SmoredBlocks.MARSHMALLOW_JAR_SLIGHTLY_ROASTED, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(SmoredBlocks.COPPER_CAMPFIRE, RenderLayer.getCutout());
     }
 }

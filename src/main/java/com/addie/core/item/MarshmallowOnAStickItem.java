@@ -1,5 +1,6 @@
 package com.addie.core.item;
 
+import com.addie.core.SmoredBlocks;
 import com.addie.core.SmoredItems;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.item.TooltipContext;
@@ -39,12 +40,12 @@ public class MarshmallowOnAStickItem extends Item {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack stack = user.getStackInHand(hand);
 
-        // SHIFT + right-click = take marshmallow off stick
+
         if (user.isSneaking()) {
             NbtCompound nbt = stack.getOrCreateNbt();
             int stage = nbt.getInt("CookLevel");
 
-            // Determine marshmallow item based on roast stage
+
             ItemStack marshmallowItem = switch (stage) {
                 case 0 -> new ItemStack(SmoredItems.MARSHMALLOW);
                 case 1 -> new ItemStack(SmoredItems.MARSHMALLOW_SLIGHTLY_ROASTED);
@@ -54,15 +55,15 @@ public class MarshmallowOnAStickItem extends Item {
             };
 
             if (!world.isClient) {
-                user.getInventory().insertStack(marshmallowItem);  // Give marshmallow
-                user.getInventory().insertStack(new ItemStack(net.minecraft.item.Items.STICK)); // Give stick
-                stack.decrement(1); // Remove marshmallow-on-stick
+                user.getInventory().insertStack(marshmallowItem);
+                user.getInventory().insertStack(new ItemStack(net.minecraft.item.Items.STICK));
+                stack.decrement(1);
             }
 
             return TypedActionResult.success(stack);
         }
 
-        // Normal right-click = start roasting if near a roasting spot
+
         if (!isNearRoastingSpot(world, user)) {
             return TypedActionResult.pass(stack);
         }
@@ -79,7 +80,7 @@ public class MarshmallowOnAStickItem extends Item {
         NbtCompound nbt = stack.getOrCreateNbt();
         if (!nbt.getBoolean("Roasting")) return;
 
-        // Stop roasting if no longer near a valid roasting spot
+
         if (!isNearRoastingSpot(world, player)) {
             nbt.putBoolean("Roasting", false);
             player.clearActiveItem();
@@ -88,6 +89,14 @@ public class MarshmallowOnAStickItem extends Item {
 
         int cookStage = nbt.getInt("CookLevel");
         int progress = nbt.getInt("CookProgress") + 1;
+
+
+        boolean isNearCopperCampfire = isNearCopperCampfire(world, player);
+
+
+        if (isNearCopperCampfire) {
+            progress += 2; 
+        }
 
         if (progress >= TICKS_PER_STAGE && cookStage < MAX_STAGE) {
             cookStage++;
@@ -150,6 +159,18 @@ public class MarshmallowOnAStickItem extends Item {
             Vec3d toBlock = blockCenter.subtract(eyePos).normalize();
             double dot = lookVec.dotProduct(toBlock);
             if (dot > 0.95) return true;
+        }
+        return false;
+    }
+
+
+    private boolean isNearCopperCampfire(World world, PlayerEntity player) {
+        BlockPos base = player.getBlockPos();
+        for (BlockPos pos : BlockPos.iterateOutwards(base, 2, 2, 2)) {
+            BlockState state = world.getBlockState(pos);
+            if (state.isOf(SmoredBlocks.COPPER_CAMPFIRE)) {
+                return true;
+            }
         }
         return false;
     }

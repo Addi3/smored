@@ -6,10 +6,12 @@ import dev.amble.lib.container.impl.BlockContainer;
 import dev.amble.lib.datagen.util.NoBlockDrop;
 import dev.amble.lib.datagen.util.NoEnglish;
 import dev.amble.lib.item.AItemSettings;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
+import net.minecraft.block.*;
+import net.minecraft.block.enums.Instrument;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.sound.BlockSoundGroup;
+
+import static net.minecraft.block.Blocks.createLightLevelFromLitBlockState;
 
 public class SmoredBlocks extends BlockContainer {
 
@@ -43,4 +45,12 @@ public class SmoredBlocks extends BlockContainer {
     public static final Block MARSHMALLOW_JAR_BURNT = new MarshmallowJarBurntBlock(ABlockSettings.create()
             .itemSettings(new AItemSettings()).requiresTool()
             .strength(0.5F, 1.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.GLASS));
+
+    @NoEnglish
+    @NoBlockDrop
+    public static final Block COPPER_CAMPFIRE = new CampfireBlock(true,
+            1, AbstractBlock.Settings.create().mapColor(MapColor.SPRUCE_BROWN)
+            .instrument(Instrument.BASS).strength(2.0F).sounds(BlockSoundGroup.WOOD)
+            .luminance(createLightLevelFromLitBlockState(15)).nonOpaque().burnable());
+
 }

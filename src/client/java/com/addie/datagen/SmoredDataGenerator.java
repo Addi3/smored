@@ -82,6 +82,7 @@ public class SmoredDataGenerator implements DataGeneratorEntrypoint {
             provider.addTranslation(SmoredBlocks.MARSHMALLOW_JAR_BURNT,"Jar");
             provider.addTranslation(SmoredBlocks.MARSHMALLOW_JAR_PERFECTLY_ROASTED,"Jar");
             provider.addTranslation(SmoredBlocks.MARSHMALLOW_JAR_SLIGHTLY_ROASTED,"Jar");
+            provider.addTranslation(SmoredBlocks.COPPER_CAMPFIRE,"Copper Campfire");
 
 
             return provider;
