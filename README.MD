@@ -60,9 +60,9 @@
 
 - Create (latest fabric 1.20.1 version) -> [Download Here](https://modrinth.com/mod/create-fabric/versions?g=1.20.1&l=fabric)
 
-**Alternativly**
-
 - Tooltip Overhaul (latest fabric 1.20.1 version) -> [Download Here](https://modrinth.com/mod/tooltip-overhaul/versions?g=1.20.1&l=fabric)
+
+- JEI (latest fabric 1.20.1 version) -> [Download Here](https://modrinth.com/mod/jei/versions?g=1.20.1&l=fabric)
 
 -------------
 -------------
