@@ -214,6 +214,23 @@ public class SmoredDataGenerator implements DataGeneratorEntrypoint {
             provider.addTranslation(SmoredBlocks.MARSHMALLOW_JAR_LIGHTLY_ROASTED,"Jar");
             provider.addTranslation(SmoredBlocks.COPPER_CAMPFIRE,"Copper Campfire");
 
+            // Achivements
+
+                //Root
+            provider.addTranslation("achievement.smored.title.root","Sweet Treat!");
+            provider.addTranslation("achievement.smored.description.root","Craft a marshmallow");
+
+                //Burnt Marshmallow
+            provider.addTranslation("achievement.smored.title.eat_burnt_marshmallow","Mmmm, Carcinogens");
+            provider.addTranslation("achievement.smored.description.eat_burnt_marshmallow","Eat a burnt marshmallow");
+
+                //Burnt Smore
+            provider.addTranslation("achievement.smored.title.eat_burnt_smore","Mmm, Cruchy");
+            provider.addTranslation("achievement.smored.description.eat_burnt_smore","Eat a burnt smore");
+
+                //Obtain Jar
+            provider.addTranslation("achievement.smored.title.obtain_jar_block","Storage 101");
+            provider.addTranslation("achievement.smored.description.obtain_jar_block","Craft a jar to contain marshmallows");
 
             return provider;
         })));

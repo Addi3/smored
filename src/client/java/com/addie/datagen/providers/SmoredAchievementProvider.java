@@ -1,8 +1,16 @@
 package com.addie.datagen.providers;
 
+import com.addie.Smored;
+import com.addie.core.SmoredBlocks;
+import com.addie.core.SmoredItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricAdvancementProvider;
 import net.minecraft.advancement.Advancement;
+import net.minecraft.advancement.AdvancementFrame;
+import net.minecraft.advancement.criterion.ConsumeItemCriterion;
+import net.minecraft.advancement.criterion.InventoryChangedCriterion;
+import net.minecraft.text.Text;
+import net.minecraft.util.Identifier;
 
 import java.util.function.Consumer;
 
@@ -13,23 +21,37 @@ public class SmoredAchievementProvider extends FabricAdvancementProvider {
 
     @Override
     public void generateAdvancement(Consumer<Advancement> consumer) {
-//        Advancement root = Advancement.Builder.create()
-//                .display(AITExtrasItems.MERCURY_DISC,
-//                        Text.translatable("achievement.ait-extras.title.root"),
-//                        Text.translatable("achievement.ait-extras.description.root"),
-//                        new Identifier("textures/block/anvil.png"),
-//                        AdvancementFrame.TASK, false, false, false)
-//                .criterion("root", InventoryChangedCriterion.Conditions.items(AITExtrasItems.JELLY_BABIES))
-//                .build(consumer, AITExtras.MOD_ID + "/root");
-//
-//        Advancement jellyBabies = Advancement.Builder.create().parent(root)
-//                .display(AITExtrasItems.JELLY_BABIES,
-//                        Text.translatable("achievement.ait-extras.title.obtain_jelly_babies"),
-//                        Text.translatable("achievement.ait-extras.description.obtain_jelly_babies"),
-//                        null, AdvancementFrame.GOAL, true, true, true)
-//                .criterion("obtain_jelly_babies", InventoryChangedCriterion.Conditions.items(AITExtrasItems.JELLY_BABIES))
-//                .build(consumer, AITExtras.MOD_ID + "/obtain_jelly_babies");
+        Advancement root = Advancement.Builder.create()
+                .display(SmoredItems.MARSHMALLOW_ON_A_STICK,
+                        Text.translatable("achievement.smored.title.root"),
+                        Text.translatable("achievement.smored.description.root"),
+                        new Identifier("smored","textures/overlay/background.png"),
+                        AdvancementFrame.GOAL, true, true, false)
+                .criterion("root", InventoryChangedCriterion.Conditions.items(SmoredItems.MARSHMALLOW))
+                .build(consumer, Smored.MOD_ID + "/root");
 
+        Advancement burntMarshmallow = Advancement.Builder.create().parent(root)
+                .display(SmoredItems.MARSHMALLOW_BURNT,
+                        Text.translatable("achievement.smored.title.eat_burnt_marshmallow"),
+                        Text.translatable("achievement.smored.description.eat_burnt_marshmallow"),
+                        null, AdvancementFrame.CHALLENGE, true, true, true)
+                .criterion("eat_burnt_marshmallow", ConsumeItemCriterion.Conditions.item(SmoredItems.MARSHMALLOW_BURNT))
+                .build(consumer, Smored.MOD_ID + "/eat_burnt_marshmallow");
 
+        Advancement burntSmore = Advancement.Builder.create().parent(burntMarshmallow)
+                .display(SmoredItems.SMORE_BURNT_MARSHMALLOW,
+                        Text.translatable("achievement.smored.title.eat_burnt_smore"),
+                        Text.translatable("achievement.smored.description.eat_burnt_smore"),
+                        null, AdvancementFrame.CHALLENGE, true, true, true)
+                .criterion("eat_burnt_smore", ConsumeItemCriterion.Conditions.item(SmoredItems.SMORE_BURNT_MARSHMALLOW))
+                .build(consumer, Smored.MOD_ID + "/eat_burnt_smore");
+
+        Advancement jarBlock = Advancement.Builder.create().parent(root)
+                .display(SmoredBlocks.MARSHMALLOW_JAR ,
+                        Text.translatable("achievement.smored.title.obtain_jar_block"),
+                        Text.translatable("achievement.smored.description.obtain_jar_block"),
+                        null, AdvancementFrame.TASK, true, true, true)
+                .criterion("obtain_jar_block", InventoryChangedCriterion.Conditions.items(SmoredBlocks.MARSHMALLOW_JAR))
+                .build(consumer, Smored.MOD_ID + "/obtain_jar_block");
     }
 }
