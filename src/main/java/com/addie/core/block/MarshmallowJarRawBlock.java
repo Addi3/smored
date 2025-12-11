@@ -111,7 +111,7 @@ public class MarshmallowJarRawBlock extends Block {
         ItemStack marshmallowOnStick = new ItemStack(SmoredItems.MARSHMALLOW_ON_A_STICK);
         NbtCompound nbt = marshmallowOnStick.getOrCreateNbt();
         int cookLevel = getCookLevelForJar(currentCount);
-        nbt.putInt("CookLevel", cookLevel);
+        nbt.putInt("CookLevel", 0);
         return marshmallowOnStick;
     }
 
