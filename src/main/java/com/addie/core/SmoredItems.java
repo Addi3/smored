@@ -42,7 +42,7 @@ public class SmoredItems extends ItemContainer {
     public static final Item SMORE_LIGHTLY_ROASTED_MARSHMALLOW = new SmoreLightlyRoastedItem(new AItemSettings().group(SmoredItemGroups.MAIN).food(SmoredFoodComponenets.MARSHMALLOW_COOKED));
 
     @NoEnglish
-    public static final Item SMORE_PERFECTLY_ROASTED_MARSHMALLOW = new SmorePerfectlyRoastedItem(new AItemSettings().group(SmoredItemGroups.MAIN).food(SmoredFoodComponenets.MARSHMALLOW_COOKED));
+    public static final Item SMORE_PERFECTLY_ROASTED_MARSHMALLOW = new SmorePerfectlyRoastedItem(new AItemSettings().group(SmoredItemGroups.MAIN).food(SmoredFoodComponenets.MARSHMALLOW_COOKED_REGEN));
 
     @NoEnglish
     public static final Item SMORE_BURNT_MARSHMALLOW = new SmoreBurntItem(new AItemSettings().group(SmoredItemGroups.MAIN).food(SmoredFoodComponenets.MARSHMALLOW_BURNT));
