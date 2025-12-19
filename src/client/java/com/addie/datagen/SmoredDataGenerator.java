@@ -188,6 +188,78 @@ public class SmoredDataGenerator implements DataGeneratorEntrypoint {
                     .input('L',Blocks.OAK_LOG)
                     .criterion(hasItem(Blocks.OAK_LOG), conditionsFromItem(Blocks.OAK_LOG)));
 
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, SmoredBlocks.SPRUCE_LOG_SEAT, 2)
+                    .group("small_log")
+                    .pattern("LLL")
+                    .input('L',Blocks.SPRUCE_LOG)
+                    .criterion(hasItem(Blocks.SPRUCE_LOG), conditionsFromItem(Blocks.SPRUCE_LOG)));
+
+
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, SmoredBlocks.BIRCH_LOG_SEAT, 2)
+                    .group("small_log")
+                    .pattern("LLL")
+                    .input('L',Blocks.BIRCH_LOG)
+                    .criterion(hasItem(Blocks.BIRCH_LOG), conditionsFromItem(Blocks.BIRCH_LOG)));
+
+
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, SmoredBlocks.JUNGLE_LOG_SEAT, 2)
+                    .group("small_log")
+                    .pattern("LLL")
+                    .input('L',Blocks.JUNGLE_LOG)
+                    .criterion(hasItem(Blocks.JUNGLE_LOG), conditionsFromItem(Blocks.JUNGLE_LOG)));
+
+
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, SmoredBlocks.ACACIA_LOG_SEAT, 2)
+                    .group("small_log")
+                    .pattern("LLL")
+                    .input('L',Blocks.ACACIA_LOG)
+                    .criterion(hasItem(Blocks.ACACIA_LOG), conditionsFromItem(Blocks.ACACIA_LOG)));
+
+
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, SmoredBlocks.DARK_OAK_LOG_SEAT, 2)
+                    .group("small_log")
+                    .pattern("LLL")
+                    .input('L',Blocks.DARK_OAK_LOG)
+                    .criterion(hasItem(Blocks.DARK_OAK_LOG), conditionsFromItem(Blocks.DARK_OAK_LOG)));
+
+
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, SmoredBlocks.MANGROVE_LOG_SEAT, 2)
+                    .group("small_log")
+                    .pattern("LLL")
+                    .input('L',Blocks.MANGROVE_LOG)
+                    .criterion(hasItem(Blocks.MANGROVE_LOG), conditionsFromItem(Blocks.MANGROVE_LOG)));
+
+
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, SmoredBlocks.CHERRY_LOG_SEAT, 2)
+                    .group("small_log")
+                    .pattern("LLL")
+                    .input('L',Blocks.CHERRY_LOG)
+                    .criterion(hasItem(Blocks.CHERRY_LOG), conditionsFromItem(Blocks.CHERRY_LOG)));
+
+
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, SmoredBlocks.CRIMSON_LOG_SEAT, 2)
+                    .group("small_log")
+                    .pattern("LLL")
+                    .input('L',Blocks.CRIMSON_STEM)
+                    .criterion(hasItem(Blocks.CRIMSON_STEM), conditionsFromItem(Blocks.CRIMSON_STEM)));
+
+
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, SmoredBlocks.WARPED_LOG_SEAT, 2)
+                    .group("small_log")
+                    .pattern("LLL")
+                    .input('L',Blocks.WARPED_STEM)
+                    .criterion(hasItem(Blocks.WARPED_STEM), conditionsFromItem(Blocks.WARPED_STEM)));
+
+
             return provider;
 
         })));
@@ -235,6 +307,15 @@ public class SmoredDataGenerator implements DataGeneratorEntrypoint {
             provider.addTranslation(SmoredBlocks.MARSHMALLOW_JAR_LIGHTLY_ROASTED,"Jar");
             provider.addTranslation(SmoredBlocks.COPPER_CAMPFIRE,"Copper Campfire");
             provider.addTranslation(SmoredBlocks.OAK_LOG_SEAT,"Small Oak Log");
+            provider.addTranslation(SmoredBlocks.SPRUCE_LOG_SEAT,"Small Spruce Log");
+            provider.addTranslation(SmoredBlocks.BIRCH_LOG_SEAT,"Small Birch Log");
+            provider.addTranslation(SmoredBlocks.JUNGLE_LOG_SEAT,"Small Jungle Log");
+            provider.addTranslation(SmoredBlocks.ACACIA_LOG_SEAT,"Small Acacia Log");
+            provider.addTranslation(SmoredBlocks.DARK_OAK_LOG_SEAT,"Small Dark Oak Log");
+            provider.addTranslation(SmoredBlocks.MANGROVE_LOG_SEAT,"Small Mangrove Log");
+            provider.addTranslation(SmoredBlocks.CHERRY_LOG_SEAT,"Small Cherry Log");
+            provider.addTranslation(SmoredBlocks.CRIMSON_LOG_SEAT,"Small Crimson Stem");
+            provider.addTranslation(SmoredBlocks.WARPED_LOG_SEAT,"Small Warped Stem");
 
             // Achivements
 

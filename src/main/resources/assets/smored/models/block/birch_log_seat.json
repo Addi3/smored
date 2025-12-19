@@ -1,0 +1,8 @@
+{
+  "parent": "smored:block/log_seat",
+  "textures": {
+    "top": "minecraft:block/birch_log",
+    "side": "minecraft:block/birch_log",
+    "sidealt": "minecraft:block/birch_log_top"
+  }
+}

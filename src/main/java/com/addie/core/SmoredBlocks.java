@@ -60,4 +60,58 @@ public class SmoredBlocks extends BlockContainer {
             .itemSettings(new AItemSettings().group(SmoredItemGroups.MAIN)).requiresTool()
             .strength(0.5F, 1.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.WOOD));
 
+    @NoEnglish
+    @AxeMineable
+    public static final Block SPRUCE_LOG_SEAT = new LogSeatBlock(ABlockSettings.create()
+            .itemSettings(new AItemSettings().group(SmoredItemGroups.MAIN)).requiresTool()
+            .strength(0.5F, 1.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.WOOD));
+
+    @NoEnglish
+    @AxeMineable
+    public static final Block BIRCH_LOG_SEAT = new LogSeatBlock(ABlockSettings.create()
+            .itemSettings(new AItemSettings().group(SmoredItemGroups.MAIN)).requiresTool()
+            .strength(0.5F, 1.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.WOOD));
+
+    @NoEnglish
+    @AxeMineable
+    public static final Block JUNGLE_LOG_SEAT = new LogSeatBlock(ABlockSettings.create()
+            .itemSettings(new AItemSettings().group(SmoredItemGroups.MAIN)).requiresTool()
+            .strength(0.5F, 1.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.WOOD));
+
+    @NoEnglish
+    @AxeMineable
+    public static final Block ACACIA_LOG_SEAT = new LogSeatBlock(ABlockSettings.create()
+            .itemSettings(new AItemSettings().group(SmoredItemGroups.MAIN)).requiresTool()
+            .strength(0.5F, 1.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.WOOD));
+
+    @NoEnglish
+    @AxeMineable
+    public static final Block DARK_OAK_LOG_SEAT = new LogSeatBlock(ABlockSettings.create()
+            .itemSettings(new AItemSettings().group(SmoredItemGroups.MAIN)).requiresTool()
+            .strength(0.5F, 1.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.WOOD));
+
+    @NoEnglish
+    @AxeMineable
+    public static final Block MANGROVE_LOG_SEAT = new LogSeatBlock(ABlockSettings.create()
+            .itemSettings(new AItemSettings().group(SmoredItemGroups.MAIN)).requiresTool()
+            .strength(0.5F, 1.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.WOOD));
+
+    @NoEnglish
+    @AxeMineable
+    public static final Block CHERRY_LOG_SEAT = new LogSeatBlock(ABlockSettings.create()
+            .itemSettings(new AItemSettings().group(SmoredItemGroups.MAIN)).requiresTool()
+            .strength(0.5F, 1.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.WOOD));
+
+    @NoEnglish
+    @AxeMineable
+    public static final Block CRIMSON_LOG_SEAT = new LogSeatBlock(ABlockSettings.create()
+            .itemSettings(new AItemSettings().group(SmoredItemGroups.MAIN)).requiresTool()
+            .strength(0.5F, 1.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.WOOD));
+
+    @NoEnglish
+    @AxeMineable
+    public static final Block WARPED_LOG_SEAT = new LogSeatBlock(ABlockSettings.create()
+            .itemSettings(new AItemSettings().group(SmoredItemGroups.MAIN)).requiresTool()
+            .strength(0.5F, 1.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.WOOD));
+
 }

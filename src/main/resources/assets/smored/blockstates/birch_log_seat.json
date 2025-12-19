@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "smored:block/birch_log_seat",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "smored:block/birch_log_seat",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "smored:block/birch_log_seat"
+    },
+    "facing=west": {
+      "model": "smored:block/birch_log_seat",
+      "y": 90
+    }
+  }
+}

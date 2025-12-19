@@ -1,0 +1,8 @@
+{
+  "parent": "smored:block/log_seat",
+  "textures": {
+    "top": "minecraft:block/mangrove_log",
+    "side": "minecraft:block/mangrove_log",
+    "sidealt": "minecraft:block/mangrove_log_top"
+  }
+}

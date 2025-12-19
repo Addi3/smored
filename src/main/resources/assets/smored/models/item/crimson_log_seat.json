@@ -1,0 +1,8 @@
+{
+  "parent": "smored:block/log_seat",
+  "textures": {
+    "top": "minecraft:block/crimson_stem",
+    "side": "minecraft:block/crimson_stem",
+    "sidealt": "minecraft:block/crimson_stem_top"
+  }
+}
