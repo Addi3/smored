@@ -167,6 +167,13 @@ public class SmoredDataGenerator implements DataGeneratorEntrypoint {
                     .criterion(hasItem(SmoredItems.MARSHMALLOW_BURNT), conditionsFromItem(SmoredItems.MARSHMALLOW_BURNT))
                     .criterion(hasItem(Items.COCOA_BEANS), conditionsFromItem(Items.COCOA_BEANS)));
 
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, SmoredBlocks.OAK_LOG_SEAT, 2)
+                    .group("small_log")
+                    .pattern("LLL")
+                    .input('L',Blocks.OAK_LOG)
+                    .criterion(hasItem(Blocks.OAK_LOG), conditionsFromItem(Blocks.OAK_LOG)));
+
             return provider;
 
         })));
@@ -213,6 +220,7 @@ public class SmoredDataGenerator implements DataGeneratorEntrypoint {
             provider.addTranslation(SmoredBlocks.MARSHMALLOW_JAR_PERFECTLY_ROASTED,"Jar");
             provider.addTranslation(SmoredBlocks.MARSHMALLOW_JAR_LIGHTLY_ROASTED,"Jar");
             provider.addTranslation(SmoredBlocks.COPPER_CAMPFIRE,"Copper Campfire");
+            provider.addTranslation(SmoredBlocks.OAK_LOG_SEAT,"Small Oak Log");
 
             // Achivements
 

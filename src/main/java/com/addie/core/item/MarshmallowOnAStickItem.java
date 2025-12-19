@@ -142,7 +142,7 @@ public class MarshmallowOnAStickItem extends Item {
     }
 
     private boolean isNearRoastingSpot(World world, PlayerEntity player) {
-        double maxDistance = 2.0;
+        double maxDistance = 2.5;
         Vec3d eyePos = player.getEyePos();
         Vec3d lookVec = player.getRotationVec(1.0f);
 

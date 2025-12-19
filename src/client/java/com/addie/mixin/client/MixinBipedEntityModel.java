@@ -25,13 +25,13 @@ public abstract class MixinBipedEntityModel<T extends LivingEntity> {
 
         if (isRoasting(main)) {
             if (leftArm != null) {
-                leftArm.pitch = 0f;
+                leftArm.pitch = -0.2f;
                 leftArm.yaw = 0f;
                 leftArm.roll = 0f;
             }
 
             if (rightArm != null) {
-                rightArm.pitch = 0f;
+                rightArm.pitch = -0.2f;
                 rightArm.yaw = 0f;
                 rightArm.roll = 0f;
             }

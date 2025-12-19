@@ -53,4 +53,10 @@ public class SmoredBlocks extends BlockContainer {
             .instrument(Instrument.BASS).strength(2.0F).sounds(BlockSoundGroup.WOOD)
             .luminance(createLightLevelFromLitBlockState(15)).nonOpaque().burnable());
 
+    @NoEnglish
+    @NoBlockDrop
+    public static final Block OAK_LOG_SEAT = new LogSeatBlock(ABlockSettings.create()
+            .itemSettings(new AItemSettings().group(SmoredItemGroups.MAIN)).requiresTool()
+            .strength(0.5F, 1.0F).pistonBehavior(PistonBehavior.NORMAL).sounds(BlockSoundGroup.WOOD));
+
 }

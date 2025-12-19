@@ -1,6 +1,7 @@
 package com.addie;
 
 import com.addie.core.SmoredBlocks;
+import com.addie.core.SmoredEntityTypes;
 import com.addie.core.SmoredItemGroups;
 import com.addie.core.SmoredItems;
 import dev.amble.lib.container.RegistryContainer;
@@ -21,5 +22,6 @@ public class Smored implements ModInitializer {
         RegistryContainer.register(SmoredItems.class, MOD_ID);
         RegistryContainer.register(SmoredBlocks.class, MOD_ID);
         RegistryContainer.register(SmoredItemGroups.class, MOD_ID);
+        RegistryContainer.register(SmoredEntityTypes.class, MOD_ID);
 	}
 }
