@@ -7,6 +7,8 @@ import com.addie.datagen.providers.SmoredAchievementProvider;
 import com.addie.datagen.providers.SmoredRecipeProvider;
 import dev.amble.lib.datagen.lang.AmbleLanguageProvider;
 import dev.amble.lib.datagen.lang.LanguageType;
+import dev.amble.lib.datagen.loot.AmbleBlockLootTable;
+import dev.amble.lib.datagen.tag.AmbleBlockTagProvider;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.block.Blocks;
@@ -28,11 +30,23 @@ public class SmoredDataGenerator implements DataGeneratorEntrypoint {
 
         generateachivement(pack);
         genLang(pack);
+        genLoot(pack);
+        genTags(pack);
         generateRecipes(pack);
 	}
 
     private void generateachivement(FabricDataGenerator.Pack pack) {
         pack.addProvider(SmoredAchievementProvider::new);
+    }
+
+
+
+    private void genLoot(FabricDataGenerator.Pack pack) {
+        pack.addProvider((((output, registriesFuture) -> new AmbleBlockLootTable(output).withBlocks(SmoredBlocks.class))));
+    }
+
+    private void genTags(FabricDataGenerator.Pack pack) {
+        pack.addProvider((((output, registriesFuture) -> new AmbleBlockTagProvider(output, registriesFuture).withBlocks(SmoredBlocks.class))));
     }
 
     public void generateRecipes(FabricDataGenerator.Pack pack) {
