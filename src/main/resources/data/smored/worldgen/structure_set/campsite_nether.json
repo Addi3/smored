@@ -1,0 +1,20 @@
+{
+  "structures": [
+    {
+      "structure": "smored:campsite_nether",
+      "weight": 6
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 84845502,
+    "frequency": 0.41,
+    "spacing": 40,
+    "separation": 35,
+    "spread_type": "triangular",
+    "frequency_reduction_method": "default",
+    "exclusion_zone": {
+      "chunk_count": 5
+    }
+  }
+}

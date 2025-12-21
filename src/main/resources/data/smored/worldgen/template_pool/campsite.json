@@ -1,0 +1,16 @@
+{
+  "name": "smored:campsite",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 150,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "smored:campsite",
+        "processors": "minecraft:empty"
+      }
+    }
+  ]
+}
+
