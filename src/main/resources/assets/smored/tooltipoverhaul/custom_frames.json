@@ -20,7 +20,9 @@
         "smored:marshmallow_jar_raw",
         "smored:marshmallow_jar_lightly_roasted",
         "smored:marshmallow_jar_perfectly_roasted",
-        "smored:marshmallow_jar_burnt"
+        "smored:marshmallow_jar_burnt",
+        "smored:marshmallow_scorched",
+        "smored:marshmallow_scorched_on_a_stick"
       ],
       "gradientType": "custom",
       "borderType": "static",

@@ -47,11 +47,19 @@ public class SmoredAchievementProvider extends FabricAdvancementProvider {
                 .build(consumer, Smored.MOD_ID + "/eat_burnt_smore");
 
         Advancement jarBlock = Advancement.Builder.create().parent(root)
-                .display(SmoredBlocks.MARSHMALLOW_JAR ,
+                .display(SmoredBlocks.MARSHMALLOW_JAR,
                         Text.translatable("achievement.smored.title.obtain_jar_block"),
                         Text.translatable("achievement.smored.description.obtain_jar_block"),
                         null, AdvancementFrame.TASK, true, true, true)
                 .criterion("obtain_jar_block", InventoryChangedCriterion.Conditions.items(SmoredBlocks.MARSHMALLOW_JAR))
                 .build(consumer, Smored.MOD_ID + "/obtain_jar_block");
+
+        Advancement burntMarshmallowStick = Advancement.Builder.create().parent(root)
+                .display(SmoredItems.MARSHMALLOW_SCORCHED_ON_A_STICK,
+                        Text.translatable("achievement.smored.title.obtain_scorched_marshmallow_stick"),
+                        Text.translatable("achievement.smored.description.obtain_scorched_marshmallow_stick"),
+                        null, AdvancementFrame.TASK, true, true, true)
+                .criterion("obtain_scorched_marshmallow_stick", InventoryChangedCriterion.Conditions.items(SmoredItems.MARSHMALLOW_SCORCHED_ON_A_STICK))
+                .build(consumer, Smored.MOD_ID + "/obtain_scorched_marshmallow_stick");
     }
 }

@@ -5,6 +5,11 @@ build/
 out/
 classes/
 
+# datagen
+
+src/main/generated/.cache
+src/main/generated
+
 # eclipse
 
 *.launch

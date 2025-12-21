@@ -21,6 +21,9 @@ public class SmoredItems extends ItemContainer {
     public static final Item MARSHMALLOW_BURNT = new Item(new AItemSettings().group(SmoredItemGroups.MAIN).food(SmoredFoodComponenets.MARSHMALLOW_BURNT).maxCount(16));
 
     @NoEnglish
+    public static final Item MARSHMALLOW_SCORCHED = new MarshmallowScorchedItem(new AItemSettings().group(SmoredItemGroups.MAIN).food(SmoredFoodComponenets.MARSHMALLOW_BURNT).maxCount(16));
+
+    @NoEnglish
     public static final Item MARSHMALLOW_ON_A_STICK = new MarshmallowOnAStickItem(new AItemSettings().group(SmoredItemGroups.MAIN).maxCount(1));
 
     @NoEnglish
@@ -31,6 +34,9 @@ public class SmoredItems extends ItemContainer {
 
     @NoEnglish
     public static final Item MARSHMALLOW_BURNT_ON_A_STICK = new MarshmallowOnAStickItem(new AItemSettings().maxCount(1));
+
+    @NoEnglish
+    public static final Item MARSHMALLOW_SCORCHED_ON_A_STICK = new MarshmallowOnAStickItem(new AItemSettings().maxCount(1));
 
     @NoEnglish
     public static final Item CRACKER = new Item(new AItemSettings().group(SmoredItemGroups.MAIN).food(SmoredFoodComponenets.MARSHMALLOW));

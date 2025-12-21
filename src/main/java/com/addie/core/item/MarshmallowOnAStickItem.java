@@ -28,7 +28,7 @@ import java.util.List;
 public class MarshmallowOnAStickItem extends Item implements DifferingHandModelItem {
 
     private static final int TICKS_PER_STAGE = 40;
-    private static final int MAX_STAGE = 3;
+    private static final int MAX_STAGE = 4;
 
     private static final TagKey<net.minecraft.block.Block> ROASTING_TAG =
             TagKey.of(RegistryKeys.BLOCK, new Identifier("smored", "roasting_spot"));
@@ -52,6 +52,7 @@ public class MarshmallowOnAStickItem extends Item implements DifferingHandModelI
                 case 1 -> new ItemStack(SmoredItems.MARSHMALLOW_LIGHTLY_ROASTED);
                 case 2 -> new ItemStack(SmoredItems.MARSHMALLOW_PERFECTLY_ROASTED);
                 case 3 -> new ItemStack(SmoredItems.MARSHMALLOW_BURNT);
+                case 4 -> new ItemStack(SmoredItems.MARSHMALLOW_SCORCHED);
                 default -> new ItemStack(SmoredItems.MARSHMALLOW);
             };
 
@@ -107,6 +108,7 @@ public class MarshmallowOnAStickItem extends Item implements DifferingHandModelI
                 case 1 -> SmoredItems.MARSHMALLOW_LIGHTLY_ROASTED_ON_A_STICK;
                 case 2 -> SmoredItems.MARSHMALLOW_PERFECTLY_ROASTED_ON_A_STICK;
                 case 3 -> SmoredItems.MARSHMALLOW_BURNT_ON_A_STICK;
+                case 4 -> SmoredItems.MARSHMALLOW_SCORCHED_ON_A_STICK;
                 default -> this;
             };
 
@@ -186,6 +188,7 @@ public class MarshmallowOnAStickItem extends Item implements DifferingHandModelI
             case 1 -> "item.smored.marshmallow_on_a_stick.lightly_roasted";
             case 2 -> "item.smored.marshmallow_on_a_stick.perfectly_roasted";
             case 3 -> "item.smored.marshmallow_on_a_stick.burnt";
+            case 4 -> "item.smored.marshmallow_on_a_stick.scorched";
             default -> "item.smored.marshmallow_on_a_stick.unknown";
         };
 
@@ -194,6 +197,7 @@ public class MarshmallowOnAStickItem extends Item implements DifferingHandModelI
             case 1 -> 0xFFD27F;
             case 2 -> 0xFFAA00;
             case 3 -> 0x550000;
+            case 4 -> 0x200101;
             default -> 0x7b1019;
         };
 
