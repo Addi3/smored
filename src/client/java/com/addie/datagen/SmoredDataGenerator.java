@@ -4,21 +4,20 @@ import com.addie.core.SmoredBlocks;
 import com.addie.core.SmoredItemGroups;
 import com.addie.core.SmoredItems;
 import com.addie.datagen.providers.SmoredAchievementProvider;
-import com.addie.datagen.providers.SmoredRecipeProvider;
+import com.lib.datagenproviders.CallistoLibRecipeProvider;
+import com.lib.datagenproviders.CallistoLibSoundProvider;
 import dev.amble.lib.datagen.lang.AmbleLanguageProvider;
 import dev.amble.lib.datagen.lang.LanguageType;
 import dev.amble.lib.datagen.loot.AmbleBlockLootTable;
 import dev.amble.lib.datagen.tag.AmbleBlockTagProvider;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
+import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
-import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.tag.ItemTags;
-
-import java.security.Provider;
 
 import static net.minecraft.data.server.recipe.RecipeProvider.conditionsFromItem;
 import static net.minecraft.data.server.recipe.RecipeProvider.hasItem;
@@ -33,13 +32,19 @@ public class SmoredDataGenerator implements DataGeneratorEntrypoint {
         genLoot(pack);
         genTags(pack);
         generateRecipes(pack);
+        pack.addProvider(this::addSounds);
 	}
 
     private void generateachivement(FabricDataGenerator.Pack pack) {
         pack.addProvider(SmoredAchievementProvider::new);
     }
 
+    public CallistoLibSoundProvider addSounds(FabricDataOutput output) {
+        CallistoLibSoundProvider soundProvider = new CallistoLibSoundProvider(output);
 
+        //soundProvider.addSound("SubTitle Name", ModSounds.SOUND_NAME);
+        return soundProvider;
+    }
 
     private void genLoot(FabricDataGenerator.Pack pack) {
         pack.addProvider((((output, registriesFuture) -> new AmbleBlockLootTable(output).withBlocks(SmoredBlocks.class))));
@@ -51,7 +56,7 @@ public class SmoredDataGenerator implements DataGeneratorEntrypoint {
 
     public void generateRecipes(FabricDataGenerator.Pack pack) {
         pack.addProvider((((output, registriesFuture) -> {
-            SmoredRecipeProvider provider = new SmoredRecipeProvider(output);
+            CallistoLibRecipeProvider provider = new CallistoLibRecipeProvider(output);
 
             // MISC
             ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, SmoredBlocks.COPPER_CAMPFIRE, 1)

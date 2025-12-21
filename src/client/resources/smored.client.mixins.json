@@ -4,7 +4,9 @@
 	"compatibilityLevel": "JAVA_17",
 	"client": [
 		"MixinBipedEntityModel",
-      "HeldItemRendererMixin"
+      "HeldItemRendererMixin",
+		"diffitemmodel.ItemRendererMixin",
+		"diffitemmodel.ModelLoaderMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

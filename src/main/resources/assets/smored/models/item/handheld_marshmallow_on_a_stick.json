@@ -1,0 +1,6 @@
+{
+  "parent": "smored:item/handheld_marshmallow_on_a_stick_base",
+  "textures": {
+    "layer0": "smored:item/marshmallow"
+  }
+}

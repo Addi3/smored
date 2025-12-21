@@ -1,0 +1,8 @@
+{
+	"format_version": "1.9.0",
+	"credit": "Made with Blockbench",
+	"parent": "smored:item/handheld_marshmallow_on_a_stick_base",
+	"textures": {
+		"layer0": "smored:item/burnt_marshmallow"
+	}
+}

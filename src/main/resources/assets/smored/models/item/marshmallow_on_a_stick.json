@@ -1,6 +1,6 @@
 {
-  "parent": "smored:item/marshmallow_on_a_stick_base",
+  "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "smored:item/marshmallow"
+    "layer0": "smored:item/marshmallow_on_a_stick_item"
   }
 }
