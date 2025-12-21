@@ -1,4 +1,4 @@
-package com.addie.mixin.client.diffitemmodel;
+package com.addie.mixin.client;
 
 import com.addie.Smored;
 import net.minecraft.client.color.block.BlockColors;
@@ -16,14 +16,13 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import java.util.List;
 import java.util.Map;
 
-
 @Mixin(ModelLoader.class)
 public abstract class ModelLoaderMixin {
     @Shadow
     protected abstract void addModel(ModelIdentifier modelId);
 
     @Inject(method = "<init>", at = @ At(value = "INVOKE", target = "Lnet/minecraft/client/render/model/ModelLoader;addModel(Lnet/minecraft/client/util/ModelIdentifier;)V", ordinal = 3, shift = At.Shift.AFTER))
-    public void weaponized$addItemModel(BlockColors blockColors, Profiler profiler, Map<Identifier, JsonUnbakedModel> jsonUnbakedModels, Map<Identifier, List<ModelLoader.SourceTrackedData>> blockStates, CallbackInfo ci) {
+    public void smored$addItemModel(BlockColors blockColors, Profiler profiler, Map<Identifier, JsonUnbakedModel> jsonUnbakedModels, Map<Identifier, List<ModelLoader.SourceTrackedData>> blockStates, CallbackInfo ci) {
         this.addModel(new ModelIdentifier(Smored.MOD_ID, "handheld_marshmallow_on_a_stick", "inventory"));
         this.addModel(new ModelIdentifier(Smored.MOD_ID, "handheld_marshmallow_lightly_roasted_on_a_stick", "inventory"));
         this.addModel(new ModelIdentifier(Smored.MOD_ID, "handheld_marshmallow_perfectly_roasted_on_a_stick", "inventory"));

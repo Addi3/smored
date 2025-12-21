@@ -2,6 +2,7 @@ package com.addie.core.item;
 
 import com.addie.core.SmoredBlocks;
 import com.addie.core.SmoredItems;
+import com.lib.core.items.DifferingHandModelItem;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.LivingEntity;
@@ -24,7 +25,7 @@ import net.minecraft.world.World;
 
 import java.util.List;
 
-public class MarshmallowOnAStickItem extends Item {
+public class MarshmallowOnAStickItem extends Item implements DifferingHandModelItem {
 
     private static final int TICKS_PER_STAGE = 40;
     private static final int MAX_STAGE = 3;

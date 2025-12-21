@@ -5,8 +5,8 @@
 	"client": [
 		"MixinBipedEntityModel",
       "HeldItemRendererMixin",
-		"diffitemmodel.ItemRendererMixin",
-		"diffitemmodel.ModelLoaderMixin"
+		"ItemRendererMixin",
+		"ModelLoaderMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
