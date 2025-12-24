@@ -1,0 +1,11 @@
+{
+  "type": "voidcrafting:void_crafting",
+  "input": {
+    "item": "smored:marshmallow_perfectly_roasted_on_a_stick"
+  },
+  "radius": 5,
+  "result": {
+    "item": "smored:creative_marshmallow_on_a_stick",
+    "count": 1
+  }
+}

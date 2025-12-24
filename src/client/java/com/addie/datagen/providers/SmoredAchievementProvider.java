@@ -61,5 +61,13 @@ public class SmoredAchievementProvider extends FabricAdvancementProvider {
                         null, AdvancementFrame.TASK, true, true, true)
                 .criterion("obtain_scorched_marshmallow_stick", InventoryChangedCriterion.Conditions.items(SmoredItems.MARSHMALLOW_SCORCHED_ON_A_STICK))
                 .build(consumer, Smored.MOD_ID + "/obtain_scorched_marshmallow_stick");
+
+     Advancement creativeMarshmallowStick = Advancement.Builder.create().parent(root)
+             .display(SmoredItems.CREATIVE_MARSHMALLOW_ON_A_STICK,
+                     Text.translatable("achievement.smored.title.obtain_creative_marshmallow_stick"),
+                     Text.translatable("achievement.smored.description.obtain_creative_marshmallow_stick"),
+                     null, AdvancementFrame.CHALLENGE, true, true, true)
+             .criterion("obtain_creative_marshmallow_stick", InventoryChangedCriterion.Conditions.items(SmoredItems.CREATIVE_MARSHMALLOW_ON_A_STICK))
+             .build(consumer, Smored.MOD_ID + "/obtain_creative_marshmallow_stick");
     }
 }

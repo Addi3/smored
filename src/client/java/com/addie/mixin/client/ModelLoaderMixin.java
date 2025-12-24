@@ -28,5 +28,6 @@ public abstract class ModelLoaderMixin {
         this.addModel(new ModelIdentifier(Smored.MOD_ID, "handheld_marshmallow_perfectly_roasted_on_a_stick", "inventory"));
         this.addModel(new ModelIdentifier(Smored.MOD_ID, "handheld_marshmallow_burnt_on_a_stick", "inventory"));
         this.addModel(new ModelIdentifier(Smored.MOD_ID, "handheld_marshmallow_scorched_on_a_stick", "inventory"));
+        this.addModel(new ModelIdentifier(Smored.MOD_ID, "handheld_creative_marshmallow_on_a_stick", "inventory"));
     }
 }

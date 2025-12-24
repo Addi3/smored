@@ -7,6 +7,7 @@
 [<img alt="amble" height="56" src="https://raw.githubusercontent.com/amblelabs/modkit/refs/heads/main/promo/cozy_vector_requires.svg">](https://modrinth.com/mod/amblekit)
 [<img alt="fabric" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/supported/fabric_vector.svg">](https://fabricmc.net/) <!-- SVG version -->
 ![Replace this with a description](https://cdn.modrinth.com/data/cached_images/9eac87b58331af401c559133e1438798e88a55d6.png)
+[<img alt="lib" height="56" src="https://raw.githubusercontent.com/Addi3/callisto/master/promo/cozy_vector.svg">](https://modrinth.com/mod/callisto-lib)
 -------------
 <h2>
   <img src="https://cdn.modrinth.com/data/cached_images/b18b275a0e9bb4000e015b935b65037166301538.png"
@@ -48,6 +49,7 @@
 </h2>
 
 - Requires AmbleKit (latest 1.20.1 version) -> [Download Here](https://modrinth.com/mod/amblekit/versions)
+- Requires Callisto (latest 1.20.1 version) -> [Download Here](https://modrinth.com/mod/callisto-lib)
 
 <h2>
   <img src="https://cdn.modrinth.com/data/cached_images/29848556cea889595907388e4cb59a97a4e86aea.png"
@@ -61,6 +63,8 @@
 - Create (latest fabric 1.20.1 version) -> [Download Here](https://modrinth.com/mod/create-fabric/versions?g=1.20.1&l=fabric)
 
 - Tooltip Overhaul (latest fabric 1.20.1 version) -> [Download Here](https://modrinth.com/mod/tooltip-overhaul/versions?g=1.20.1&l=fabric)
+
+- Void Crafting (latest fabric 1.20.1 version) -> [Download Here](https://modrinth.com/mod/voidcrafting/version/1.11.0+fabric-1.20)
 
 - JEI (latest fabric 1.20.1 version) -> [Download Here](https://modrinth.com/mod/jei/versions?g=1.20.1&l=fabric)
 

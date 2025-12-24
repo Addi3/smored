@@ -139,6 +139,16 @@ public class SmoredDataGenerator implements DataGeneratorEntrypoint {
                     .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
                     .criterion(hasItem(SmoredItems.MARSHMALLOW_BURNT), conditionsFromItem(SmoredItems.MARSHMALLOW_SCORCHED)));
 
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, SmoredItems.CREATIVE_MARSHMALLOW_ON_A_STICK, 1)
+                    .group("marshmallow")
+                    .pattern("M")
+                    .pattern("S")
+                    .input('S',Items.STICK)
+                    .input('M',SmoredItems.CREATIVE_MARSHMALLOW)
+                    .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                    .criterion(hasItem(SmoredItems.CREATIVE_MARSHMALLOW), conditionsFromItem(SmoredItems.CREATIVE_MARSHMALLOW)));
+
             // SMORES
             ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, SmoredItems.CRACKER, 2)
                     .group("smore")
@@ -194,6 +204,18 @@ public class SmoredDataGenerator implements DataGeneratorEntrypoint {
                     .input('K',Items.COCOA_BEANS)
                     .criterion(hasItem(SmoredItems.CRACKER), conditionsFromItem(SmoredItems.CRACKER))
                     .criterion(hasItem(SmoredItems.MARSHMALLOW_BURNT), conditionsFromItem(SmoredItems.MARSHMALLOW_BURNT))
+                    .criterion(hasItem(Items.COCOA_BEANS), conditionsFromItem(Items.COCOA_BEANS)));
+
+
+            ;provider.addShapedRecipe(ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, SmoredItems.CREATIVE_SMORE, 4)
+                    .group("smore")
+                    .pattern("CMK")
+                    .pattern("  C")
+                    .input('C',SmoredItems.CRACKER)
+                    .input('M',SmoredItems.CREATIVE_MARSHMALLOW)
+                    .input('K',Items.COCOA_BEANS)
+                    .criterion(hasItem(SmoredItems.CRACKER), conditionsFromItem(SmoredItems.CRACKER))
+                    .criterion(hasItem(SmoredItems.CREATIVE_MARSHMALLOW), conditionsFromItem(SmoredItems.CREATIVE_MARSHMALLOW))
                     .criterion(hasItem(Items.COCOA_BEANS), conditionsFromItem(Items.COCOA_BEANS)));
 
 
@@ -295,6 +317,7 @@ public class SmoredDataGenerator implements DataGeneratorEntrypoint {
             provider.addTranslation("item.smored.marshmallow_on_a_stick.perfectly_roasted","Perfectly Roasted Marshmallow");
             provider.addTranslation("item.smored.marshmallow_on_a_stick.burnt","Burnt Marshmallow");
             provider.addTranslation("item.smored.marshmallow_on_a_stick.scorched","Scorched Marshmallow");
+            provider.addTranslation("item.smored.marshmallow_on_a_stick.creative","Creative Marshmallow");
             provider.addTranslation("item.smored.marshmallow_on_a_stick.unknown","umm... how did you get this state?");
             provider.addTranslation("item.smored.marshmallow_on_a_stick.tooltip","Shift + Right-Click to take marshmallow off stick!");
             provider.addTranslation("item.smored.marshmallow_on_a_stick.tooltipalt","Right-Click over campfire to cook!");
@@ -305,17 +328,20 @@ public class SmoredDataGenerator implements DataGeneratorEntrypoint {
             provider.addTranslation(SmoredItems.MARSHMALLOW_PERFECTLY_ROASTED,"Perfectly Roasted MarshMallow");
             provider.addTranslation(SmoredItems.MARSHMALLOW_BURNT,"Burnt MarshMallow");
             provider.addTranslation(SmoredItems.MARSHMALLOW_SCORCHED,"Scoreched MarshMallow");
+            provider.addTranslation(SmoredItems.CREATIVE_MARSHMALLOW,"Creative MarshMallow");
             provider.addTranslation(SmoredItems.CRACKER,"Cracker");
             provider.addTranslation(SmoredItems.SMORE,"Smore");
             provider.addTranslation(SmoredItems.SMORE_BURNT_MARSHMALLOW,"Smore");
             provider.addTranslation(SmoredItems.SMORE_PERFECTLY_ROASTED_MARSHMALLOW,"Smore");
             provider.addTranslation(SmoredItems.SMORE_LIGHTLY_ROASTED_MARSHMALLOW,"Smore");
+            provider.addTranslation(SmoredItems.CREATIVE_SMORE,"Smore");
 
             provider.addTranslation(SmoredItems.MARSHMALLOW_ON_A_STICK,"MarshMallow On A Stick");
             provider.addTranslation(SmoredItems.MARSHMALLOW_LIGHTLY_ROASTED_ON_A_STICK,"MarshMallow On A Stick");
             provider.addTranslation(SmoredItems.MARSHMALLOW_PERFECTLY_ROASTED_ON_A_STICK,"MarshMallow On A Stick");
             provider.addTranslation(SmoredItems.MARSHMALLOW_BURNT_ON_A_STICK,"MarshMallow On A Stick");
             provider.addTranslation(SmoredItems.MARSHMALLOW_SCORCHED_ON_A_STICK,"MarshMallow On A Stick");
+            provider.addTranslation(SmoredItems.CREATIVE_MARSHMALLOW_ON_A_STICK,"MarshMallow On A Stick");
 
             // Blocks
             provider.addTranslation(SmoredBlocks.MARSHMALLOW_JAR,"Jar");
@@ -356,6 +382,10 @@ public class SmoredDataGenerator implements DataGeneratorEntrypoint {
             //Obtain Scorched Marshmallow Stick
             provider.addTranslation("achievement.smored.title.obtain_scorched_marshmallow_stick","HOT HOT HOT!");
             provider.addTranslation("achievement.smored.description.obtain_scorched_marshmallow_stick","Obtain a scorched marshmallow on a stick, I wonder what happends when you eat it?");
+
+            //Obtain Creative Marshmallow Stick
+            provider.addTranslation("achievement.smored.title.obtain_creative_marshmallow_stick","Did You Cheat?!");
+            provider.addTranslation("achievement.smored.description.obtain_creative_marshmallow_stick","Obtain a creative marshmallow on a stick.");
 
             return provider;
         })));

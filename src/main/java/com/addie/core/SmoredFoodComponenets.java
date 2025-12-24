@@ -38,5 +38,13 @@ public class SmoredFoodComponenets {
             .alwaysEdible()
             .build();
 
+    public static final FoodComponent CREATIVE_MARSHMALLOW = new FoodComponent.Builder()
+            .hunger(10)
+            .saturationModifier(1f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.LEVITATION, 200, 1), 1.0f)
+            .snack()
+            .alwaysEdible()
+            .build();
+
 }
 
