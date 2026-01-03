@@ -21,13 +21,13 @@ repositories {
 		}
 	}
     // amblekit
-    maven {
-        url "https://amblelabs.github.io/maven"
+	maven {
+		url "https://amblelabs.dev/maven"
 
-        content {
-            includeGroup "dev.amble"
-        }
-    }
+		content {
+			includeGroup "dev.amble"
+		}
+	}
     maven {
         url "https://theo.is-a.dev/maven/"
 
