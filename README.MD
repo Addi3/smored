@@ -1,8 +1,8 @@
-![logo.png](src/main/resources/assets/smored/logo.png)
+![Replace this with a description](https://cdn.modrinth.com/data/cached_images/d9c625093520f9468b36d48ef2eb31a66c20064e.png)
 
 <sub>please do not upload this to any other site without Addie's permission</sub>
 -------------
-
+[<img alt="curseforge" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/available/curseforge_vector.svg">](https://legacy.curseforge.com/minecraft/mc-mods/smored) <!-- SVG version -->
 [<img alt="modrinth" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/available/modrinth_vector.svg">](https://modrinth.com/project/smored) <!-- SVG version -->
 [<img alt="amble" height="56" src="https://raw.githubusercontent.com/amblelabs/modkit/refs/heads/main/promo/cozy_vector_requires.svg">](https://modrinth.com/mod/amblekit)
 [<img alt="fabric" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/supported/fabric_vector.svg">](https://fabricmc.net/) <!-- SVG version -->
@@ -97,5 +97,6 @@
 </h2>
 
 ### - [Modrinth](https://modrinth.com/project/smored)
+### - [Curseforge](https://legacy.curseforge.com/minecraft/mc-mods/smored)
 ### - [Github](https://github.com/Addi3/smored/)
 ### - [Discord Server](https://discord.gg/kndce97FyU)
